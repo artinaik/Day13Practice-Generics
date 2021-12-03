@@ -68,5 +68,35 @@ namespace FindMaxUsingGenerics
         {
             Console.Write("Maximum number is : " + FindMaxFloat());
         }
+        public static string FindMaxString()
+        {
+            Console.Write("Enter First String : ");
+            string string1 = Console.ReadLine();
+            Console.Write("Enter Second String : ");
+            string string2 = Console.ReadLine();
+            Console.Write("Enter Third String : ");
+            string string3 = Console.ReadLine();
+            if ((string1.CompareTo(string2) > 0 && (string1.CompareTo(string3) > 0)))
+            {
+                return string1;
+            }
+            else if ((string2.CompareTo(string3) > 0 && (string2.CompareTo(string1) > 0)))
+            {
+                return string2;
+            }
+            else if ((string3.CompareTo(string1) > 0 && (string3.CompareTo(string2) > 0)))
+            {
+                return string3;
+            }
+            else
+            {
+                Console.WriteLine("Strings are equal");
+            }
+            return default;
+        }
+        public static void ShowMaxString()
+        {
+            Console.Write("Maximum string is : " + FindMaxString());
+        }
     }
 }

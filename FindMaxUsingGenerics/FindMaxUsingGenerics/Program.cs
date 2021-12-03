@@ -12,7 +12,7 @@ namespace FindMaxUsingGenerics
         {
             Console.WriteLine("\nWelcome to Find Maximum problem using Generics..!");
             Console.WriteLine("---------------------------------------------------");
-            Console.WriteLine("1)Maximum in Integer   2)Maximum in Float");
+            Console.WriteLine("1)Maximum in Integer   2)Maximum in Float    3)Maximum in String");
             Console.WriteLine("---------------------------------------------------");
             Console.Write("Enter your choice : ");
             int choice = int.Parse(Console.ReadLine());
@@ -23,6 +23,9 @@ namespace FindMaxUsingGenerics
                     break;
                 case 2:
                     Maximum.ShowMaxFloat();
+                    break;
+                case 3:
+                    Maximum.ShowMaxString();
                     break;
                 default:
                     Console.WriteLine("Invalid Choice !!!");
