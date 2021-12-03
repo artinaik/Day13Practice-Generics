@@ -11,6 +11,7 @@ namespace FindMaxUsingGenerics
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Find Maximum problem using Generics..!");
+            Maximum.ShowMax();
             Console.ReadKey();
         }
     }
