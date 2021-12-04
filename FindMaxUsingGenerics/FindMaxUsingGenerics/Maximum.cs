@@ -10,29 +10,19 @@ namespace FindMaxUsingGenerics
     {
         public static int FindMaxInt()
         {
-            Console.Write("Enter First number : ");
-            int num1 = int.Parse(Console.ReadLine());
-            Console.Write("Enter Second number : ");
-            int num2 = int.Parse(Console.ReadLine());
-            Console.Write("Enter Third number : ");
-            int num3 = int.Parse(Console.ReadLine());
-            if((num1.CompareTo(num2)>0&&(num1.CompareTo(num3)>0)))
+            Console.Write("Enter how many numbers you want to comapare : ");
+            int size = int.Parse(Console.ReadLine());
+            int[] array = new int[size];
+            int count = 1;
+            for(int i=0;i<size;i++)
             {
-                return num1;
+                Console.Write("Enter {0} number : ",count);                
+                array[i]= int.Parse(Console.ReadLine());
+                count++;
             }
-            else if((num2.CompareTo(num3) > 0 && (num2.CompareTo(num1) > 0)))
-            {
-                return num2;
-            }
-            else if((num3.CompareTo(num1) > 0 && (num3.CompareTo(num2) > 0)))
-            {
-                return num3;
-            }
-            else
-            {
-                Console.WriteLine("Numbers are equal");
-            }
-            return 0;
+            Array.Sort(array);
+            int max = array[size - 1];
+            return max;
         }
         public static void ShowMaxInt()
         {
@@ -40,29 +30,19 @@ namespace FindMaxUsingGenerics
         }
         public static float FindMaxFloat()
         {
-            Console.Write("Enter First number : ");
-            float num1 = float.Parse(Console.ReadLine());
-            Console.Write("Enter Second number : ");
-            float num2 = float.Parse(Console.ReadLine());
-            Console.Write("Enter Third number : ");
-            float num3 = float.Parse(Console.ReadLine());
-            if ((num1.CompareTo(num2) > 0 && (num1.CompareTo(num3) > 0)))
+            Console.Write("Enter how many numbers you want to comapare : ");
+            int size = int.Parse(Console.ReadLine());
+            float[] array = new float[size];
+            int count = 1;
+            for (int i = 0; i < size; i++)
             {
-                return num1;
+                Console.Write("Enter {0} number : ", count);
+                array[i] = float.Parse(Console.ReadLine());
+                count++;
             }
-            else if ((num2.CompareTo(num3) > 0 && (num2.CompareTo(num1) > 0)))
-            {
-                return num2;
-            }
-            else if ((num3.CompareTo(num1) > 0 && (num3.CompareTo(num2) > 0)))
-            {
-                return num3;
-            }
-            else
-            {
-                Console.WriteLine("Numbers are equal");
-            }
-            return 0;
+            Array.Sort(array);
+            float max = array[size - 1];
+            return max;
         }
         public static void ShowMaxFloat()
         {
@@ -70,29 +50,20 @@ namespace FindMaxUsingGenerics
         }
         public static string FindMaxString()
         {
-            Console.Write("Enter First String : ");
-            string string1 = Console.ReadLine();
-            Console.Write("Enter Second String : ");
-            string string2 = Console.ReadLine();
-            Console.Write("Enter Third String : ");
-            string string3 = Console.ReadLine();
-            if ((string1.CompareTo(string2) > 0 && (string1.CompareTo(string3) > 0)))
+            Console.Write("Enter how many strings you want to comapare : ");
+            int size = int.Parse(Console.ReadLine());
+            string[] array = new string[size];
+            int count = 1;
+            for (int i = 0; i < size; i++)
             {
-                return string1;
+                Console.Write("Enter {0} string : ", count);
+                array[i] =Console.ReadLine();
+                count++;
             }
-            else if ((string2.CompareTo(string3) > 0 && (string2.CompareTo(string1) > 0)))
-            {
-                return string2;
-            }
-            else if ((string3.CompareTo(string1) > 0 && (string3.CompareTo(string2) > 0)))
-            {
-                return string3;
-            }
-            else
-            {
-                Console.WriteLine("Strings are equal");
-            }
-            return default;
+            Array.Sort(array);
+            string max = array[size - 1];
+            return max;
+
         }
         public static void ShowMaxString()
         {
